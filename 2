@@ -2,18 +2,21 @@
 #include "pch.h"
 #include <iostream>
 using namespace std;
-void swipe(int x, int y) {
+void swipe(int& x, int& y) {
+	int c=x;
 	x = y;
-	cout << x << endl;
+	y = c;
 }
 int main()
 {
-	int a, b,c;
+	int a, b, c;
 	cin >> a;
 	cin >> b;
 	cin >> c;
 	swipe(a, b);
-	swipe(b, c);
-	swipe(c, a);
+	swipe(a, c);
+	cout << a << endl;
+	cout << b << endl;
+	cout << c << endl;
 }
 
