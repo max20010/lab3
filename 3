@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+
+
+void swipe(int& x, int& y) {
+	int c=x;
+	x = y;
+	y = c;
+}
+int main()
+{
+	int a, b, c;
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	swipe(a, b);
+	swipe(c, b);
+	cout << a << endl;
+	cout << b << endl;
+	cout << c << endl;
+}
